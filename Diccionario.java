@@ -1,4 +1,4 @@
-/*
+    /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
@@ -11,18 +11,18 @@ import java.util.List;
  * @author borja
  */
 public class Diccionario {
-
-    /**
-     * @param args the command line arguments
-     */
+      private static List<String> tipo = new ArrayList<String>();
+      private static List<String>  palabras= new ArrayList<String>();
+    public Diccionario(){
+    
+}
     
     public static void main(String[] args){
       final String ruta="/home/borja/NetBeansProjects/Diccionario/palabras.txt"; 
       File archivo = null;
       FileReader fr = null;
       BufferedReader br = null;
-      List<String> tipo = new ArrayList<String>();
-      List<String>  palabras= new ArrayList<String>();
+      
       String[] cadena;
       int i=0;
       Integer lastIndex=0;
@@ -75,7 +75,7 @@ public class Diccionario {
       }
     }
     public String[] getPalabras(){
-        return null;
+        return (String[]) palabras.toArray();
     } 
     public String getTipo(String palabra){
         return null;
