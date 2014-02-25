@@ -1,0 +1,4 @@
+Universidad
+becas;normativa;erasmus
+Fiestas
+fiesta;discoteca;party
