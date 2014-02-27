@@ -14,11 +14,7 @@ public class Diccionario {
       private static List<String> tipo = new ArrayList<String>();
       private static List<String>  palabras= new ArrayList<String>();
     public Diccionario(){
-    
-}
-    
-    public static void main(String[] args){
-      final String ruta="/home/borja/NetBeansProjects/Diccionario/palabras.txt"; 
+    final String ruta="/home/borja/NetBeansProjects/Diccionario/palabras.txt"; 
       File archivo = null;
       FileReader fr = null;
       BufferedReader br = null;
@@ -54,10 +50,13 @@ public class Diccionario {
                 i=0;
             }
          }
+         /*
           for(i=0;i<palabras.size();i++)
             System.out.println(palabras.get(i));
           for(i=0;i<tipo.size();i++)
             System.out.println(tipo.get(i));
+          
+          */
       }
       catch(Exception e){
          e.printStackTrace();
@@ -73,11 +72,29 @@ public class Diccionario {
             e2.printStackTrace();
          }
       }
+      
+}
+    
+    public static void main(String[] args){
+      
     }
     public String[] getPalabras(){
-        return (String[]) palabras.toArray();
+        String[] cadena=new String[palabras.size()];
+        palabras.toArray(cadena);
+        for (int i=0;i<palabras.size();i++){
+        }
+        return cadena;
     } 
     public String getTipo(String palabra){
+        int i;
+        //Comprobaos que la palabra si que esta en la lista de palabras
+        for (i=0;i<palabras.size();i++){
+            if (!palabra.equals(palabras.get(i))){
+                System.out.println("La palabra no está en la lista");
+                return null;
+            }
+        }
+        
         return null;
     }
 }
