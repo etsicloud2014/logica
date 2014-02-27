@@ -79,22 +79,44 @@ public class Diccionario {
       
     }
     public String[] getPalabras(){
-        String[] cadena=new String[palabras.size()];
+        String[] cadena=new String[palabras.size()];    
         palabras.toArray(cadena);
         for (int i=0;i<palabras.size();i++){
         }
         return cadena;
     } 
     public String getTipo(String palabra){
-        int i;
+        int i,index, iTipo=1;
+        String cadena;
+        boolean b=false;
+        System.out.println(palabra);
         //Comprobaos que la palabra si que esta en la lista de palabras
         for (i=0;i<palabras.size();i++){
-            if (!palabra.equals(palabras.get(i))){
+            if (palabra.equals(palabras.get(i))){
+                b=true;
+            }
+            
+                
+            
+        }
+        if (!b){
                 System.out.println("La palabra no está en la lista");
                 return null;
             }
-        }
-        
+        index=palabras.indexOf(palabra);
+        System.out.println(index);
+        if (index<0)
         return null;
+        for (i=1;i<tipo.size();i=i+2){
+            System.out.println(i);
+            if (index>Integer.parseInt(tipo.get(i))){
+                iTipo=i;
+                System.out.println("iTipo: "+iTipo);
+                
+            }
+        
+    }
+        
+        return tipo.get(iTipo-1);
     }
 }
