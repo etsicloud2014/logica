@@ -7,14 +7,13 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 /**
- *
- * @author borja
- */
+*
+* @author borja
+*/
 public class Diccionario {
       private static List<String> tipo = new ArrayList<String>();
-      private static List<String>  palabras= new ArrayList<String>();
-    public Diccionario(){
-    final String ruta="/home/borja/NetBeansProjects/Diccionario/palabras.txt"; 
+      private static List<String> palabras= new ArrayList<String>();
+    public Diccionario(String ruta){
       File archivo = null;
       FileReader fr = null;
       BufferedReader br = null;
@@ -51,24 +50,23 @@ public class Diccionario {
             }
          }
          /*
-          for(i=0;i<palabras.size();i++)
-            System.out.println(palabras.get(i));
-          for(i=0;i<tipo.size();i++)
-            System.out.println(tipo.get(i));
-          
-          */
+for(i=0;i<palabras.size();i++)
+System.out.println(palabras.get(i));
+for(i=0;i<tipo.size();i++)
+System.out.println(tipo.get(i));
+*/
       }
       catch(Exception e){
          e.printStackTrace();
       }finally{
          // En el finally cerramos el fichero, para asegurarnos
-         // que se cierra tanto si todo va bien como si salta 
+         // que se cierra tanto si todo va bien como si salta
          // una excepcion.
-         try{                    
-            if( null != fr ){   
-               fr.close();     
-            }                  
-         }catch (Exception e2){ 
+         try{
+            if( null != fr ){
+               fr.close();
+            }
+         }catch (Exception e2){
             e2.printStackTrace();
          }
       }
@@ -79,12 +77,22 @@ public class Diccionario {
       
     }
     public String[] getPalabras(){
-        String[] cadena=new String[palabras.size()];    
+        String[] cadena=new String[palabras.size()];
         palabras.toArray(cadena);
         for (int i=0;i<palabras.size();i++){
         }
         return cadena;
-    } 
+    }
+    public List<String> getTemas(){
+        List<String> aux = new ArrayList<String>();
+        String[] cadena =new String[tipo.size()];
+        aux=tipo;
+        for (int i=1;i<aux.size();i=i+2){
+            aux.set(i, "0");
+        }
+        aux.toArray(cadena);
+        return aux;
+    }
     public String getTipo(String palabra){
         int i,index, iTipo=1;
         boolean b=false;
