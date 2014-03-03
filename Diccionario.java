@@ -87,9 +87,7 @@ public class Diccionario {
     } 
     public String getTipo(String palabra){
         int i,index, iTipo=1;
-        String cadena;
         boolean b=false;
-        System.out.println(palabra);
         //Comprobaos que la palabra si que esta en la lista de palabras
         for (i=0;i<palabras.size();i++){
             if (palabra.equals(palabras.get(i))){
@@ -104,14 +102,12 @@ public class Diccionario {
                 return null;
             }
         index=palabras.indexOf(palabra);
-        System.out.println(index);
         if (index<0)
         return null;
         for (i=1;i<tipo.size();i=i+2){
             System.out.println(i);
             if (index>Integer.parseInt(tipo.get(i))){
                 iTipo=i;
-                System.out.println("iTipo: "+iTipo);
                 
             }
         

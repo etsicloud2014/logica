@@ -13,7 +13,11 @@ public class PruebaDiccionario {
         Diccionario dic = new Diccionario();
         for (String s : dic.getPalabras())
             System.out.println(s);
-        System.out.println(dic.getTipo("discoteca"));
+        String tipo;
+        tipo=dic.getTipo("discoteca");
+        if (tipo==null)
+            System.out.println("No se reconoce el tipo de palabra");
+        System.out.println(tipo);
     }
     
     
