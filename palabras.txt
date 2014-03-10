@@ -1,4 +1,7 @@
 Universidad
 becas;normativa;erasmus
+Anuncios
+venta;alquiler;piso;habitación;compartido;compartir;baño;cocina
 Fiestas
-fiesta;discoteca;party;música
+fiesta;discoteca;party;música;fiestas
+

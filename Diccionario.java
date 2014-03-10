@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package diccionario;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -98,7 +98,7 @@ System.out.println(tipo.get(i));
         boolean b=false;
         //Comprobaos que la palabra si que esta en la lista de palabras
         for (i=0;i<palabras.size();i++){
-            if (palabra.equals(palabras.get(i))){
+            if (palabra.equalsIgnoreCase(palabras.get(i))){
                 b=true;
             }
             
@@ -113,7 +113,6 @@ System.out.println(tipo.get(i));
         if (index<0)
         return null;
         for (i=1;i<tipo.size();i=i+2){
-            System.out.println(i);
             if (index>Integer.parseInt(tipo.get(i))){
                 iTipo=i;
                 
