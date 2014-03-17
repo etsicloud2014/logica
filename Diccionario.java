@@ -11,7 +11,11 @@ import java.util.List;
 * @author borja
 */
 public class Diccionario {
+	//Lista del tipo de palabras: en las posiciones pares (empezando por 0)
+	//Se encuentran los temas, y en los impares el lugar en la lista de palabras
+	//donde empieza ese tema
       private static List<String> tipo = new ArrayList<String>();
+      //Lista de todas las palabras clave
       private static List<String> palabras= new ArrayList<String>();
     public Diccionario(String ruta){
       File archivo = null;
@@ -33,7 +37,6 @@ public class Diccionario {
          // Lectura del fichero
          String linea;
          while((linea=br.readLine())!=null){
-            System.out.println(linea);
             if(i==0){
                 tipo.add(linea);
                 i++;
@@ -43,18 +46,14 @@ public class Diccionario {
             else{
                 cadena=linea.split(";");
                 tipo.add(lastIndex.toString());
-                lastIndex=cadena.length;
+                lastIndex+=cadena.length;
                 for(i=0;i<cadena.length;i++)
                     palabras.add(cadena[i]);
                 i=0;
             }
          }
-         /*
-for(i=0;i<palabras.size();i++)
-System.out.println(palabras.get(i));
-for(i=0;i<tipo.size();i++)
-System.out.println(tipo.get(i));
-*/
+
+
       }
       catch(Exception e){
          e.printStackTrace();
@@ -74,9 +73,10 @@ System.out.println(tipo.get(i));
 }
     
     public static void main(String[] args){
-      
+    	
     }
     public String[] getPalabras(){
+    	
         String[] cadena=new String[palabras.size()];
         palabras.toArray(cadena);
         for (int i=0;i<palabras.size();i++){
@@ -84,16 +84,24 @@ System.out.println(tipo.get(i));
         return cadena;
     }
     public List<String> getTemas(){
+    	
         List<String> aux = new ArrayList<String>();
         String[] cadena =new String[tipo.size()];
-        aux=tipo;
+
+        aux.addAll(tipo);
         for (int i=1;i<aux.size();i=i+2){
             aux.set(i, "0");
         }
         aux.toArray(cadena);
+
         return aux;
     }
+    
+    
     public String getTipo(String palabra){
+
+    	
+    	//Devuelve el tema al que pertenece palabra
         int i,index, iTipo=1;
         boolean b=false;
         //Comprobaos que la palabra si que esta en la lista de palabras
@@ -117,9 +125,8 @@ System.out.println(tipo.get(i));
                 iTipo=i;
                 
             }
-        
+            
     }
-        
         return tipo.get(iTipo-1);
     }
 }

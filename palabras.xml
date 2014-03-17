@@ -1,0 +1,27 @@
+<temas>
+	<Universidad>
+		<Normativas>
+			normativa;normativas;becas;beca;universidad
+		</Normativas>
+		<Seminarios>
+			seminarios;seminario;empresa;empresas
+		</Seminarios>
+		<Internacional>
+			erasmus;movilidad;extranjero;idiomas
+		</Internacional>
+	</Universidad>
+	<Anuncios>
+		<Venta>
+		</Venta>
+		<Alquiler>
+		</Alquiler>
+		<Fiestas>
+		</Fiestas>
+		<Cursos>
+		</Cursos>
+	</Anuncios>
+Anuncios
+venta;alquiler;piso;habitación;compartido;compartir;baño;cocina;ventas
+Fiestas
+fiesta;discoteca;party;música;fiestas
+</temas>

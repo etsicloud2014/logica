@@ -46,21 +46,15 @@ public class PruebaExterno {
             }
             */           
             //Printamos el titulo del fichero
-            System.out.println(AbrirXml.open("/home/alumno/nuevo_fich_parseado.xml")[1]);
+            //System.out.println(AbrirXml.open("/home/alumno/nuevo_fich_parseado.xml")[1]);
             //Obtenemos la lista de plabaras clave
             String [] palabras =dic.getPalabras();
             //Creamos una lista con los temas: en las posiciones pares
             //estan los temas, y en las impares los contadores inicializados en 0
             List<String> temas =dic.getTemas();
-            for (String palabra : palabras) {
-                System.out.println(palabra);
-            }
-            for (String tema : temas){
-                System.out.println(tema);
-            }
             //Obtenemos el texto del docuemtno
             String texto=AbrirXml.open("/home/alumno/nuevo_fich_parseado.xml")[0];
-            
+            //Quitamos los saltos de linea
             texto = texto.replaceAll("[\n\r]","");
             //Separamos todas las palabras
             String delimitadores= "[ .,;?!¡¿\'\"\\[\\]]+";
@@ -68,7 +62,6 @@ public class PruebaExterno {
             //Comprobamos si cada palabra es clave, si lo es, obetenemos el tema
             //y aumentamos el contador de ese tema
             for (String palabrasSeparada : palabrasSeparadas) {
-                System.out.println(palabrasSeparada);
                 for (String palabra : palabras){
                     if (palabra.equalsIgnoreCase(palabrasSeparada)){
                         int indice;
@@ -82,10 +75,13 @@ public class PruebaExterno {
                     
                 }
             }
-            for (String tema : temas){
-                System.out.println(tema);
+            int ContadorTema=1;
+            for (int i=1;i<temas.size();i=i+2){
+            	if(Integer.parseInt(temas.get(i))>Integer.parseInt(temas.get(ContadorTema))){
+            		ContadorTema=i;
+            	}
             }
-            AbrirXml.saveKind("/home/alumno/nuevo_fich_parseado.xml", "wsfeesaf");
+            AbrirXml.saveKind("/home/alumno/nuevo_fich_parseado.xml", temas.get(ContadorTema-1));
 
     }
     
