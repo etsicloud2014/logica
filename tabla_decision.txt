@@ -1,0 +1,11 @@
+if(normativa & universidad || beca/becas & universidad || informacion & beca/becas || informacion&normativa)
+->UNIVERSIDAD
+if(erasmus & programa|| erasmus/movilidad&informacion/plazos ||solicitar/solicitud & plaza/destino&erasmus/movilidad)
+->UNIVERSIDAD
+if(seminario & empresa/universidad ||seminario &impartir)
+->SEMINARIOS
+if(piso &alquiler/venta || piso/habitacion &compartir)
+->ANUNCIOS-ALQUILER/VENTA
+if(fiesta&celebrar || discoteca&fiesta ||fiesta&entradas || vendo/venta&entradas&fiesta)
+->ANUNCIOS-FIESTAS
+
