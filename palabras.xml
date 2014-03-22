@@ -4,24 +4,23 @@
 			normativa;normativas;becas;beca;universidad
 		</Normativas>
 		<Seminarios>
-			seminarios;seminario;empresa;empresas
+			seminarios;seminario;empresa;empresas;impartir
 		</Seminarios>
 		<Internacional>
-			erasmus;movilidad;extranjero;idiomas
+			erasmus;movilidad;extranjero;idiomas;internacional;solicitud;plaza;destino;programa
 		</Internacional>
 	</Universidad>
 	<Anuncios>
 		<Venta>
+                  venta;ventas;piso;baño;cocina
 		</Venta>
 		<Alquiler>
+                   alquiler;piso;habitacion;compartir;compartido
 		</Alquiler>
 		<Fiestas>
-		</Fiestas>
+	        	fiesta;discoteca;party;música;fiestas;entradas;celebrar
+               </Fiestas>
 		<Cursos>
 		</Cursos>
 	</Anuncios>
-Anuncios
-venta;alquiler;piso;habitación;compartido;compartir;baño;cocina;ventas
-Fiestas
-fiesta;discoteca;party;música;fiestas
 </temas>
