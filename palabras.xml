@@ -1,18 +1,18 @@
 <temas>
 	<Universidad>
 		<Normativas>
-			normativa;normativas;becas;beca;universidad
+			normativa;normativas;becas;beca;universidad;estatuto;consejo;resolución;junta;boletín;oficial;reglamento;regular;reguladora;ley;administración;UPV/EHU
 		</Normativas>
 		<Seminarios>
 			seminarios;seminario;empresa;empresas;impartir
 		</Seminarios>
 		<Internacional>
-			erasmus;movilidad;extranjero;idiomas;internacional;solicitud;plaza;destino;programa
+			erasmus;movilidad;extranjero;internacional;programa;diploma;acreditativo
 		</Internacional>
 	</Universidad>
 	<Anuncios>
 		<Venta>
-                  venta;ventas;piso;baño;cocina
+                  venta;vender;vendo
 		</Venta>
 		<Alquiler>
                    alquiler;piso;habitacion;compartir;compartido
@@ -21,6 +21,7 @@
 	        	fiesta;discoteca;party;música;fiestas;entradas;celebrar
                </Fiestas>
 		<Cursos>
+			inglés;alemán;frances;curso;diseño
 		</Cursos>
 	</Anuncios>
 </temas>

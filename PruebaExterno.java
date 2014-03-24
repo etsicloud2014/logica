@@ -56,7 +56,18 @@ public class PruebaExterno {
             String texto=AbrirXml.open("/home/alumno/nuevo_fich_parseado.xml")[0];
             //Quitamos los saltos de linea
             texto = texto.replaceAll("[\n\r]","");
+            
+            
+            System.out.println(ObtenerTema.BuscarPalabra(texto, "beca"));
+            
+            
+            
+            
+            
+            
+            
             //Separamos todas las palabras
+            /*Parte de obtenr tema palabra por palabra
             String delimitadores= "[ .,;?!¡¿\'\"\\[\\]]+";
             String[] palabrasSeparadas = texto.split(delimitadores);
             //Comprobamos si cada palabra es clave, si lo es, obetenemos el tema
@@ -81,7 +92,9 @@ public class PruebaExterno {
             		ContadorTema=i;
             	}
             }
+            
             AbrirXml.saveKind("/home/alumno/nuevo_fich_parseado.xml", temas.get(ContadorTema-1));
+            */
 
     }
     
