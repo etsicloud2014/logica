@@ -120,4 +120,49 @@ public class AbrirXml {
         }
         return 0;
     }
+    public static int saveSubKind(String path, String subTema) {
+        //Abre el documento XML con la información parseado, y guarda el tema 
+        //en el campo correspondiente
+        
+        //Abrimos el fichero y creamos la estructura XML
+        File fXmlFile = new File(path);
+        DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+        try {
+            DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+            Document doc = dBuilder.parse(fXmlFile);
+
+            doc.getDocumentElement().normalize();
+            //Buscamos el campo nodos
+            NodeList nList = doc.getElementsByTagName("nodos");
+
+            for (int temp = 0; temp < nList.getLength(); temp++) {
+
+                Node nNode = nList.item(temp);
+
+                if (nNode.getNodeType() == Node.ELEMENT_NODE) {
+
+                    Element eElement = (Element) nNode;
+                    //Obtenemos el nodo kind que correspone al tema. En el escribimos el tema
+                    NodeList listaMeta=eElement.getElementsByTagName("meta");
+                    Node nodoMeta=listaMeta.item(0);
+                    Element metaElement = (Element) nodoMeta;
+                    metaElement.getElementsByTagName("subkind").item(0).setTextContent(subTema);
+                  
+                }
+                // Escritura del fichero
+                TransformerFactory transformerFactory = TransformerFactory.newInstance();
+                Transformer transformer = transformerFactory.newTransformer();
+                DOMSource source = new DOMSource(doc);
+                StreamResult result = new StreamResult(new File(path));
+                transformer.transform(source, result);
+            }
+
+        } catch (Exception e) {
+
+            e.printStackTrace();
+            return 1;
+
+        }
+        return 0;
+    }
 }

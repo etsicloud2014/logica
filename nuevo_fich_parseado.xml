@@ -1,11 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
-<plantilla>
+<?xml version="1.0" encoding="utf-8" standalone="no"?><plantilla>
 <nodos>
 <title>nuevo_fich</title>
 <source>fuente</source>
 <date>Mon Feb 24 16:40:31 2014</date>
-<kind>tipo</kind>
-<meta>meta_info</meta>
+<kind>Anuncios</kind>
+<meta>
+<subkind>Alquiler</subkind>
+</meta>
 <text>
 
 Descripción
