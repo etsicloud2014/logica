@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plantilla>
+<nodos>
+<title>título</title>
+<source>fuente</source>
+<date>fecha(última modificación)</date>
+<kind>tipo</kind>
+<meta>
+  <subkind>subtema</subkind>  
+</meta>
+<text>texto</text>
+</nodos>
+</plantilla>

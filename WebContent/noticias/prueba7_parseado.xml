@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?><plantilla>
+<nodos>
+<title>prueba7</title>
+<source>fuente</source>
+<date>Mon May  5 18:08:00 2014</date>
+<kind>tipo</kind>
+<meta>
+  <subkind>subtema</subkind>  
+</meta>
+<text>Esto es una nueva informacion de becas
+</text>
+</nodos>
+</plantilla>

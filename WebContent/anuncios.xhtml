@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+
+<title>Universidad:Etsi Cloud</title>
+<link rel="stylesheet" type="text/css" href="estilos.css" />
+
+
+</h:head>
+<body>
+
+<div id="global">
+<h1 style="text-align:center"> ETSI CLOUD <br/> <img src="logo.png" id="logo"/></h1>
+
+<div id="sesion">
+<table border="1" width="100%">
+  <tr>
+    <th bgcolor="#00ffff">Inicio sesion</th>
+  </tr>
+     <h:form>
+  <tr>
+  <td>
+
+   <h:outputText value="Nombre: " style="background-color:white"/>
+ <h:inputText id="nombre" required="true" value="#{altaMB.nombre}" requieredMessage="ERROR: tienes que introducir tu nombre"/>
+
+    </td>
+  </tr>
+  <tr>
+  <td>
+    <h:outputText value="Contraseña:" style="background-color:white"/>
+<h:inputSecret id="pass" required="true" value="#{altaMB.pass}"/>
+
+</td>
+  </tr>
+  <tr>
+  <td>
+  <h:commandButton action="void" value="Login"/>
+  </td>
+  </tr>
+  </h:form>
+  
+</table>
+<h:outputLink value="index.xhtml" id="home"><h4>Inicio</h4></h:outputLink>
+
+</div>
+
+<div id="temas">
+<form method="post" action="mailto:etsicloud@gmail.com">
+<table  width="100%" >
+
+<tr >
+<th>Temas</th>
+</tr>
+<tr>
+<td height="100px">
+<div id="universidad">
+<h:outputLink value="universidad.xhtml" style="background-color:white">
+ <h:outputText value="Universidad" />
+ </h:outputLink>
+ </div>
+ </td>
+</tr>
+ <tr>
+ 
+
+ <td height="100px">
+  <div id="anuncios">
+<h:outputLink value="anuncios.xhtml" style="background-color:white">
+ <h:outputText value="Anuncios" />
+</h:outputLink>
+</div>
+</td>
+
+</tr>
+<tr>
+<td>
+<br /><br /><br /><br /><br /><br /><br />
+<h2>FEEDBACK</h2>
+</td>
+</tr>
+
+<tr>
+<td>
+<h:outputText value="Escriba su sugerencia para mejorar nuestra web"  style="color:white" />
+<br />
+<textarea name="sugerencias"></textarea>
+<br />
+<input type="submit" value="Enviar"/>
+</td>
+</tr>
+
+
+</table>
+</form>
+</div>
+
+
+
+
+<div id="ultimas">
+
+<h:panelGrid width="100%">
+<h3>Anuncios</h3>
+<h:dataTable value="#{interfazBean.anuncios}" var="anuncios" style="background-color:white">
+			<h:column>
+				<f:facet name="header">Titular</f:facet>
+				<h:outputText value="#{anuncios.titulo}" />
+			</h:column>
+			<h:column>
+				<f:facet name="header">Subtema</f:facet>
+				<h:outputText value="#{anuncios.categoria.subtema}" />
+			</h:column>
+			<h:column>
+				<f:facet name="header">Link</f:facet>
+				<h:outputText value="#{anuncios.link}" />
+			</h:column>
+
+			
+
+		</h:dataTable>
+		
+</h:panelGrid>
+
+</div>
+
+
+
+</div>
+
+</body>
+</html> 

@@ -1,0 +1,80 @@
+@CHARSET "UTF-8";
+
+body{
+  
+  
+background-image: url("http://hdfondos.com/wp-content/uploads/2010/11/iphone-retina-display-0003.jpg");
+}
+h1
+{
+	text-align: center;
+	color: aqua;
+
+}
+h2
+{
+	text-align: center;
+	color: aqua;
+
+}
+h3
+{
+	text-align: center;
+	color: white;
+
+}
+table
+{
+	border-width: 2px;
+	borher-color: pink;
+        font-family:  arial;
+        color : black
+}
+th
+{
+	background: aqua;
+	color: black
+} 
+
+#global {
+ width:100%; height:100%;
+
+ 
+}
+#sesion {
+ width:25%;
+ margin: 0 auto 0 auto;
+ float: right;
+}
+#temas {
+ width:25%;
+ margin: 0 auto 0 auto;
+
+ float: left;
+}
+ #universidad{
+ background-image: url("http://www.red-redial.net/images/noticias/6737-instituto-europeo-curso.jpg");
+ height: 100px;
+ }
+  #anuncios{
+ background-image: url("http://www.coruna.es/IMG/P_Contenido_1396579080834_1000_1000_A_2da66cad67fd181edff84af84522b5c.png");
+ height: 100px;
+ }
+
+
+
+#ultimas {
+ width:50%;
+ margin: 0 auto 0 auto;
+ float: center;
+}
+#home{
+	text-align: center;
+	color:white;
+	font-size: 50;
+}
+#logo{
+	height: 100x;
+	width: 130px;
+	background-position: 50% 0%;
+}
